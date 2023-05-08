@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Insurance Quote Scraper</title>
+  <link href="stylesheets/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><b>IQS</b></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="headerwrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+          <h1 style="margin-bottom: 15px; text-align: center">Insurance Quote Scraper</h1>
+
+          <div id="mainForm">
+            <h3 id="details" style="margin-bottom: 15px; text-align: center; color: white;"></h3>
+
+            <div style="margin: 15px 0px; text-align: center">
+
+              <select id="scraperChoice" class="input">
+                <option value="car" >Car Insurance</option>
+                <option value="home" selected>Home Insurance</option>
+              </select>
+
+              
+              <select id="parallelWindows" class="input">
+                <option value="1">1 windows at a time</option>
+                <option value="2">2 windows at a time</option>
+                <option value="3" selected>3 windows at a time</option>
+                <option value="4">4 windows at a time</option>
+                <option value="5">5 windows at a time</option>
+              </select>
+
+              <select id="showWindows" class="input">
+                <option value="false" selected>Don't show windows</option>
+                <option value="true" >Show windows</option>
+              </select>
+
+            </div>
+            <div class="btn-group btn-group-justified" role="group" style="margin-bottom: 15px">
+              <div class="btn-group" role="group">
+                <button id="btnAa" type="button" class="btn btn-primary">AA</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button id="btnAmi" type="button" class="btn btn-success">AMI</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button id="btnState" type="button" class="btn btn-info">STATE</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button id="btnTower" type="button" class="btn btn-warning">TOWER</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button id="btnAll" type="button" class="btn btn-danger">ALL</button>
+              </div>
+            </div>
+
+            <h3 id="details2" style="margin-bottom: 15px; text-align: center; color: white;"></h3>
+
+            <h3 id="countdown" style="margin-bottom: 15px; text-align: center; color: white;"></h3>
+
+            <h3 id="started" style="margin-bottom: 15px; text-align: center; color: white;"></h3>
+            <h3 id="ended" style="margin-bottom: 15px; text-align: center; color: white;"></h3>
+
+            <h3 id="counterContainer" style="text-align:center; display: none">
+              <span class="label label-info">Pending <span id="pendingCount" class="badge" style="background:#666; font-size: 16px">0</span></span>
+              <span class="label label-success">Success <span id="successCount" class="badge" style="background:#666; font-size: 16px">0</span></span>
+              <span class="label label-danger">Error <span id="errorCount" class="badge" style="background:#666; font-size: 16px">0</span></span>
+            </h3>
+          </div>
+				</div><!-- /col-lg-12 -->
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
